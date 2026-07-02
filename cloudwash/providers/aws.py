@@ -29,6 +29,8 @@ def cleanup(**kwargs):
                 # Emptying the dry data for previous region everytime
                 for items in data:
                     dry_data[items]['delete'] = []
+                    if items == 'OCPS':
+                        dry_data[items]['clusters'] = []
                 logger.info(f"\nResources from the region: {region}")
                 awscleanup.ocps.cleanup()
                 if is_dry_run:
