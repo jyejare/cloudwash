@@ -45,3 +45,5 @@ AWS:
             # CloudFormations names that would be skipped from cleanup
             STACK_LIST: []
         IMAGES: []
+        # OCP cluster infra IDs that should be skipped from cleanup
+        OCPS: []
